@@ -3,14 +3,44 @@ body, html {
     background: #fafafa;
 }
 
+/* input styling */
+input {
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 0.25rem;
+    min-width: 125px;
+    padding: 0.5rem;
+    transition: background-color 0.5s ease-out;
+}
+
+input:optional {
+    border-color: gray;
+}
+
 input:invalid {
-    color: red;
+    border-color: red;
 }
 
-input:enabled{
-    color: black;
+input:required{
+    border-color: black;
 }
 
+input:required:valid {
+    border-color: green;
+}
+
+input:required:focus:valid {
+    background: url("assets/check.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+  }
+
+input:focus:invalid {
+background: url("assets/error.svg") no-repeat 95% 50% lightsalmon;
+background-size: 25px;
+}
+
+/* all content */
 .content {
     background: black;
     display: flex;
@@ -19,6 +49,7 @@ input:enabled{
     
 }
 
+/* decoration on the left half of the screen */
 .deco {
     display: flex;
     flex-direction:column;
@@ -48,10 +79,11 @@ input:enabled{
 .logo img {
     height: 100%;
     width: auto;
+    opacity: 50%;
 }
 
 .logo p {
-    font-size: 75px;
+    font-size: 60px;
     color: gray;
 }
 
@@ -62,16 +94,17 @@ input:enabled{
     opacity: 35%;
 }
 
+/* all content for the user (right half of the screen) */
 .for-user {
     background: #fafafa;
     width: 67%;
     padding-left: 10px;
 }
 
+/* blurb at the top of the page */
 .blurb-container {
     display: flex;
     align-items: center;
-    /*background: indigo;*/
     height: 26%;
     width: 550px;
     padding: 0px 20px;
@@ -80,10 +113,10 @@ input:enabled{
 }
 
 .blurb-actual {
-    /*background: violet;*/
-    width: 100%;
+    width: 90%;
 }
 
+/* input fields */
 .user-input {
     background: rgb(250,250,250);
     background: linear-gradient(135deg, rgba(250,250,250,1) 19%, rgba(236,236,236,1) 100%);
@@ -95,39 +128,63 @@ input:enabled{
     box-shadow: 5px 7px #D4D4D4;
 }
 
-.user-input h2 {
-    margin-bottom: 5px;
-    margin-left: 20px;
-}
-
 .user-input-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     gap: 10px;
     padding-bottom: 20px;
     padding-top: 10px;
     margin-left: 20px;
 }
 
-.left-form {
-    display:flex;
-    flex-direction: column;
-    width: fit-content;
-    gap: 5px;
-}
-
-.right-form {
+.user-input-form label {
     display: flex;
-    flex-direction: column;
-    width: fit-content;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
 }
-
 
 .user-input > h2 {
     height: fit-content;
 }
 
+.user-input h2 {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.top-row {
+    display:flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 5px;
+}
+
+.middle-row {
+    display:flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 5px;
+}
+
+.bottom-row {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 5px;
+}
+
+.password-requirements {
+    font-size: smaller;
+    color: rgb(163, 163, 163);
+    width: 250px;
+    margin-left: 100px;
+    margin-top: -5px;
+    margin-bottom: -10px;
+}
+
+/* Below the dropshadow */
 .create-button {
     background: black;
     margin-left: 20px;
