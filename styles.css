@@ -3,8 +3,16 @@ body, html {
     background: #fafafa;
 }
 
+input:invalid {
+    color: red;
+}
+
+input:enabled{
+    color: black;
+}
+
 .content {
-    background: red;
+    background: black;
     display: flex;
     flex-direction: row;
     height: 100vh;
