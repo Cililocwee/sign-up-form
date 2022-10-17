@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knights Akkordia Sign Up Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/style.css">
     
 </head>
 <body>
@@ -40,7 +40,7 @@
                     class="user-input-form" 
                     action="example.com/path" 
                     method="post">             
-                    <div class="top-row">
+                    <div class="row">
                         <label for="first_name">First Name:</label>
                         <input 
                             type="text" 
@@ -55,7 +55,7 @@
                             required>                          
                     </div>
 
-                    <div class="middle-row">
+                    <div class="row">
                         <label for="email">Electronic Missive:</label>
                         <input 
                             type="email" 
@@ -70,8 +70,8 @@
                             onInput="this.value = phoneFormat(this.value)" 
                             required>
                     </div>
-                    <div class="bottom-row">
-                        <label id="password" for="password" >Passoath:</label>
+                    <div class="row">
+                        <label id="password" for="password">Passoath:</label>
                         <input
                             id="passwordstring"  
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
@@ -96,7 +96,7 @@
             </div> 
                   
                   
-            <div class="create-button">
+            <div class="complete-div">
                 <button type="submit" form="user-input-form">Complete Conscription</button>
             </div>
             <div class="account-check">
